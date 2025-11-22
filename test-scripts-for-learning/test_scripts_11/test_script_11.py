@@ -28,7 +28,7 @@ def main():
 
     # 'open' gets a file and returns it as a file object
     # 'with' helps ensure the file is properly closed when the block is exited (in leiu for something like file.close()) 
-    # 'r' indicates opening the file for reading
+    # 'r' indicates opening the file for reading (you can omit the r as file opened in read mode by default)
     # 'encoding' is for the type of encoding (HTML uses UTF-8)
     with open("index.html", "r", encoding="utf-8") as file:
         html_content = file.read()
