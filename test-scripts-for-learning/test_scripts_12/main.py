@@ -22,14 +22,13 @@ def main():
             names.append(row['name'])
             salary = int(row['hours_worked']) * 15
             salaries.append(salary)
-            # Take the name as is (add to names arr?)
-            # set salary = hours_worked * 15 (add to salary arr?) 
 
+    # You could probably also write the above to an array of dictionaries and iterate/set row that way, but whatever
     for i in range (3): # 0,1,2
         row = f"{names[i]},{salaries[i]}"
         print(row)
 
-        # a is 'append mode' as in add to the file contents, don't overwrite them
+        # a is 'append mode' as in append to the file contents, don't overwrite them
         with open(file_name, "a") as file:
             file.write(f"{row}\n")
 
