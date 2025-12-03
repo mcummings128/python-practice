@@ -11,4 +11,4 @@ Python comes with a standard library of built-in modules and packages.
 A module is a single Python .py file, containing things like functions and classes
 A package is a directory that contains multiple modules and potenitially sub-packages. Packages are identified by containing an `__init.py__` file
 
-You can import these modules and packages for use via the import keyword. You may have to use pip, the XXXX package installer to install certain modules and packages that are not built-in by default. If you try to import a module/package that isn't installed, TODO
+You can import these modules and packages for use via the import keyword. You may have to use pip, the Python Package Installer to install certain modules and packages that are not built-in by default. pip uses PyPI, the Python Package Index, as the default source for its packages. PyPI has a browsable webpage at pypi.org where you can look at multiple projects (a project being a Python package published on PyPI). Each project has its own page you can see the details on.  If you try to import a module/package that isn't installed, then you will get a ModuleNotFound error
