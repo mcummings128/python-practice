@@ -1,6 +1,7 @@
 # Use requests and BeautifulSoup4 libraries to get article descriptions from the UK government news site. 
 
 import requests
+# This is saying "from the bs4 module, import the BeautifulSoup class"
 from bs4 import BeautifulSoup
 
 url = "https://www.gov.uk/search/news-and-communications"
