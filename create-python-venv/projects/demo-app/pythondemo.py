@@ -10,4 +10,7 @@ print(r.status_code)
 
 # This creates an 'env' folder
 
-# TODO BLABLABALBA POWERSHELL PS1 BLABLABLA
+# Activating the virtual environment 
+
+# I was using Powershell, so I tried to run env/Scripts/activate.bat which didn't work--all it did was give me a new prompt
+# This is because when using Powershell you have to do env/Scripts/activate.ps1 instead. A ps1 file is a plain text file that contains 1 or more Powershell commands
