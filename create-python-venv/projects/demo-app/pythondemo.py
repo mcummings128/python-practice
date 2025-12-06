@@ -12,5 +12,8 @@ print(r.status_code)
 
 # Activating the virtual environment 
 
-# I was using Powershell, so I tried to run env/Scripts/activate.bat which didn't work--all it did was give me a new prompt
-# This is because when using Powershell you have to do env/Scripts/activate.ps1 instead. A ps1 file is a plain text file that contains 1 or more Powershell commands
+# I was using Powershell, so I tried to run env\Scripts\activate.bat which didn't work--all it did was give me a new prompt
+# This is because when using Powershell you have to do env\Scripts\activate.ps1 instead. A ps1 file is a plain text file that contains 1 or more Powershell commands
+# If use use cmd instead of Powershell the env\Scripts\activate.bat works fine
+# ...But I have Bash installed so nevermind to all that
+
