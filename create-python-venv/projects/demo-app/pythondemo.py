@@ -17,3 +17,15 @@ print(r.status_code)
 # If use use cmd instead of Powershell the env\Scripts\activate.bat works fine
 # ...But I have Bash installed so nevermind to all that
 
+# Doing a pip freeze in the virtual environment reveals nothing
+# This is because it's basically a brand new install--there's no packages installed
+
+# When you try to run python pythondemo.py you get a ModuleNotFound error because the requests package isn't installed
+
+# We can install the requests package like we usually would, this time we're just doing it in the virtual environment
+# pip install requests
+
+# Trying to run pythondemo.py now succeeds since the package is installed
+
+# We can exit the virtual environment by typing
+# deactivate
