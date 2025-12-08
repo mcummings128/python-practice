@@ -9,7 +9,16 @@ Each project you work on in Python should run on a virtual environment because d
 
 It is important to note that virtual environment minutiae is not typically stored in a remote Git repository because of the amount of bloat a virtual environment has associated with it. For example, in the messing around I've done the commit had 2000-something files. A lot of that is going to be packages and other things needed for the virtual enviroment to function. 
 
-Instead of uploading all that, you could do something like put all the package versions into a requirements.txt file. This is done via the command
+Instead of uploading all that, you could do something like put all the package versions into a requirements.txt file. This is done via the shell command
 
 `pip freeze > requirements.txt`
 
+That will take the output of pip freeze and throw it into the requirements.txt file. (Remember > will overwrite the contents)
+
+__Fun fact__: Installing certain Python packages begets new shell scripts. Usually pip is installed when you install a Python version, and some magic happens with things like setup.py to let the user do shell commands like the above seamlessly
+
+After requirements.txt has been committed to the repo, another developer could clone/fork your repo, create their own virtual environment, activate it, and then run the following command
+
+`pip install -r requirements.txt`
+
+The -r flag tells pip that packages should be installed from a requirements file (requirements.txt is the standard name for it)
