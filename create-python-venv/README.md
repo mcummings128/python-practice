@@ -1,6 +1,8 @@
 
 Mostly taken from the OpenClassrooms course 'Set Up a Python Environment: Create a Virtual Environment with venv' as seen here: https://openclassrooms.com/en/courses/6900846-set-up-a-python-environment/6989186-discover-python-packages
 
+See The __Projects__ section for information about the projects (really just exercises) that are in this directory. Every section after __Projects__ is notes about virtual environments. Be sure to check the project files themselves too for additional notes and comments.
+
 # About Virtual Environments
 
 Use virtual environments to make sure that you have the correct packages (including specific versions of packages) available to you as part of your local development environment when you switch between projects we use virtual environments.
