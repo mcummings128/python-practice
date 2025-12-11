@@ -5,7 +5,7 @@ See The __Projects__ section for information about the projects (really just exe
 
 #Projects
 TODO: NOTES ON THESE
-demo-app: TBD
+demo-app: An intro to virtual environments. Later is an example of how to switch between virtual environments
 demo-app-2: Used to show how virtual environments come with no/few packages installed when made. Shows how when in the context of an already activated virtul environment, activating another virtual environment automatically puts you in that newly activated virtual environment's context without having to deactivate.
 sales-target-distances: TBD
 p2c3s2: Has two separate projects within it. Each has its own virtual environment (venv1, venv2). 
