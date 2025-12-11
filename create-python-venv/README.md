@@ -18,11 +18,19 @@ When you start a project you create a virtual environment. Each virtual environm
 
 Each project you work on in Python should run on a virtual environment because different projects may require different versions of the same libraries. Generally, a Python installation (like the one on your local machine, or on a server) can only have one version of a package/module installed. Virtual environments help handle this by providing an isolated space for each project's dependencies, ensuring that installing or updating a package for one project does not affect other projects. If all your projects were using the same environment, installing a new/different version of a package for the needs of one project could break another project who was relying on the previous version you had installed.
 
+# Naming
+
+It may be surprising that virtual environments generally have the same name no matter the project. This is because it's way easier to use the command source env/bin/activate or source venv/bin/activate both in manual development and tests and programmatically. This also has the benefit of keeping the .gitignore file simple so you're not listing every single virtual environment in it. 
+
+You also don't want to name the virtual environment the same as your project, as this is confusing 
+
 # Virtual Environments and Storage in a Git repository
 
-It is important to note that virtual environment minutiae is not typically stored in a remote Git repository because of the amount of bloat a virtual environment has associated with it. For example, in the messing around I've done the commit had 2000-something files. A lot of that is going to be packages and other things needed for the virtual enviroment to function. 
+It is important to note that virtual environment minutiae is not typically stored in a remote Git repository because of the amount of bloat a virtual environment has associated with it. For example, in the messing around I've done the commit had 2000-something files. A lot of that is going to be packages and other things needed for the virtual enviroment to function. We should ignore all these files and instead add our virtual environment path(s) to the .gitignore file so Git doesn't track them.
 
-Instead of uploading all that, you could do something like put all the package versions into a requirements.txt file. This is done via the shell command
+There is a .gitignore in this repo. Observe it to see how virtual environments are being ignored.
+
+Instead, you could do something like put all the package versions into a requirements.txt file (this SHOULD go in the repo). This is done via the shell command
 
 `pip freeze > requirements.txt`
 
