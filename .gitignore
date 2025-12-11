@@ -1,4 +1,4 @@
 # This is in create-python-venv/projects/demo-app/
 myvenv/
-# This is in multiple places since venv is a common naming convention for virtual environments
-venv/
+# This is in multiple places since venv is a common naming convention for virtual environments. The pattern includes venv1, venv2, etc.
+venv*/
