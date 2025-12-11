@@ -3,6 +3,13 @@ Mostly taken from the OpenClassrooms course 'Set Up a Python Environment: Create
 
 See The __Projects__ section for information about the projects (really just exercises) that are in this directory. Every section after __Projects__ is notes about virtual environments. Be sure to check the project files themselves too for additional notes and comments.
 
+#Projects
+TODO: NOTES ON THESE
+demo-app: TBD
+demo-app-2: Used to show how virtual environments come with no/few packages installed when made. Shows how when in the context of an already activated virtul environment, activating another virtual environment automatically puts you in that newly activated virtual environment's context without having to deactivate.
+sales-target-distances: TBD
+p2c3s2: Has two separate projects within it. 
+
 # About Virtual Environments
 
 Use virtual environments to make sure that you have the correct packages (including specific versions of packages) available to you as part of your local development environment when you switch between projects we use virtual environments.
