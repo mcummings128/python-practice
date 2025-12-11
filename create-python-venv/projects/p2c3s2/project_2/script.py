@@ -1,3 +1,5 @@
+# Doesn't run b/c fuzzywuzzy module not installed
+# After pip install fuzzywuzzy this works
 from fuzzywuzzy import fuzz
 
 
