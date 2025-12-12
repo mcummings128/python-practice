@@ -30,7 +30,12 @@ It is important to note that virtual environment minutiae is not typically store
 
 There is a .gitignore in this repo. Observe it to see how virtual environments are being ignored.
 
-Instead, you could do something like put all the package versions into a requirements.txt file (this SHOULD go in the repo). This is done via the shell command
+
+## The __requirements.txt__ file
+
+It is common to put all the package versions into a requirements.txt file (this SHOULD go in the repo). This file tells developers who are working on your project (or cloning it, whatever) the packages they need to install when they set up a virtual environment
+
+You can take the output of pip freeze to get the packages used for your virtual environment, then write to the __requirements.txt__ file like so: 
 
 `pip freeze > requirements.txt`
 
