@@ -35,13 +35,13 @@ There is a .gitignore in this repo. Observe it to see how virtual environments a
 
 It is common to put all the package versions into a requirements.txt file (this SHOULD go in the repo). This file tells developers who are working on your project (or cloning it, whatever) the packages they need to install when they set up a virtual environment. Note that it is a best practice to specify a version of a package when putting it in a __requirements.txt__ file, though this may not always be possible or feasible depending on the project.
 
-You do not have to list the dependencies that may be installed when you installed your packages. Dependencies should be handled by pip install. 
+You do not have to list the dependencies that may be installed when you installed your packages. Dependencies should be handled by pip install. You can list dependencies, and depending on how you create the requirements.txt file you shouldn't be surprised to see them.
 
 You can take the output of pip freeze to get the packages used for your virtual environment, then write to the __requirements.txt__ file like so: 
 
 `pip freeze > requirements.txt`
 
-That will take the output of pip freeze and throw it into the requirements.txt file. (Remember > will overwrite the contents)
+That will take the output of pip freeze and throw it into the requirements.txt file. (Remember > will overwrite the contents). Note that this will explicitly write the dependencies as well. 
 
 __Fun fact__: Installing certain Python packages begets new shell scripts. Usually pip is installed when you install a Python version, and some magic happens with things like setup.py to let the user do shell commands like the above seamlessly
 
@@ -50,3 +50,5 @@ After requirements.txt has been committed to the repo, another developer could c
 `pip install -r requirements.txt`
 
 The -r flag tells pip that packages should be installed from a requirements file (requirements.txt is the standard name for it)
+
+An example of requirements.txt can be seen in the projects/demo-app-2 directory.
