@@ -33,7 +33,9 @@ There is a .gitignore in this repo. Observe it to see how virtual environments a
 
 ## The __requirements.txt__ file
 
-It is common to put all the package versions into a requirements.txt file (this SHOULD go in the repo). This file tells developers who are working on your project (or cloning it, whatever) the packages they need to install when they set up a virtual environment
+It is common to put all the package versions into a requirements.txt file (this SHOULD go in the repo). This file tells developers who are working on your project (or cloning it, whatever) the packages they need to install when they set up a virtual environment. Note that it is a best practice to specify a version of a package when putting it in a __requirements.txt__ file, though this may not always be possible or feasible depending on the project.
+
+You do not have to list the dependencies that may be installed when you installed your packages. Dependencies should be handled by pip install. 
 
 You can take the output of pip freeze to get the packages used for your virtual environment, then write to the __requirements.txt__ file like so: 
 
