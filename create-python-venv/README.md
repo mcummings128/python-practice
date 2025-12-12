@@ -22,7 +22,7 @@ Each project you work on in Python should run on a virtual environment because d
 
 It may be surprising that virtual environments generally have the same name no matter the project. This is because it's way easier to use the command source env/bin/activate or source venv/bin/activate both in manual development and tests and programmatically. This also has the benefit of keeping the .gitignore file simple so you're not listing every single virtual environment in it. 
 
-You also don't want to name the virtual environment the same as your project, as this is confusing 
+You also don't want to name the virtual environment the same as your project, as this is confusing especially when it comes to directories.
 
 # Virtual Environments and Storage in a Git repository
 
