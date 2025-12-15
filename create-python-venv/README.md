@@ -3,6 +3,8 @@ Mostly taken from the OpenClassrooms course 'Set Up a Python Environment: Create
 
 See The __Projects__ section for information about the projects (really just exercises) that are in this directory. Every section after __Projects__ is notes about virtual environments. Be sure to check the project files themselves too for additional notes and comments.
 
+**Note**: Python 3.12 was used for most of the stuff here!!
+
 #Projects
 TODO: NOTES ON THESE
 demo-app: An intro to virtual environments. Later is an example of how to switch between virtual environments
@@ -52,3 +54,7 @@ After requirements.txt has been committed to the repo, another developer could c
 The -r flag tells pip that packages should be installed from a requirements file (requirements.txt is the standard name for it)
 
 An example of requirements.txt can be seen in the projects/demo-app-2 directory.
+
+You can also use requirements.txt to __uninstall__ all the packages defined in it. This can be useful if you did something like interrupt a pip install with Ctrl+C and then run into unexpected issues that a subsequent pip install didn't fix. 
+
+`pip uninstall -r requirements.txt`
