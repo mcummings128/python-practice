@@ -1,0 +1,3 @@
+# Note: Had to update the requests version here from 2.24.0 d/t Python version incompatabilities
+beautifulsoup4==4.9.1
+requests>=2.31.0
