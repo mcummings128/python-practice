@@ -11,7 +11,7 @@ demo-app: An intro to virtual environments. Later is an example of how to switch
 demo-app-2: Used to show how virtual environments come with no/few packages installed when made. Shows how when in the context of an already activated virtul environment, activating another virtual environment automatically puts you in that newly activated virtual environment's context without having to deactivate.
 sales-target-distances: TBD
 p2c3s2: Has two separate projects within it. Each has its own virtual environment (venv1, venv2). 
-
+p2c5s3: Has two separate projects within it. Each has its own virtual environment. The task_1 and task_2 folders have been downloaded externally. task_1 came with a requirements.txt, while task_2 didn't. task_2 posits you create the requirements.txt for others, but this actually ends up not being the case since I ran into issues that are detailed in task_2/script.py. 
 # About Virtual Environments
 
 Use virtual environments to make sure that you have the correct packages (including specific versions of packages) available to you as part of your local development environment when you switch between projects we use virtual environments.
@@ -21,6 +21,8 @@ When you start a project you create a virtual environment. Each virtual environm
 Each project you work on in Python should run on a virtual environment because different projects may require different versions of the same libraries. Generally, a Python installation (like the one on your local machine, or on a server) can only have one version of a package/module installed. Virtual environments help handle this by providing an isolated space for each project's dependencies, ensuring that installing or updating a package for one project does not affect other projects. If all your projects were using the same environment, installing a new/different version of a package for the needs of one project could break another project who was relying on the previous version you had installed.
 
 # Naming
+
+The standard name of virtual environments is env or venv. It's also common to prefix the name with a `.` (i.e. .env or .venv) as this keeps your virtual enviroment hidden and out of the way
 
 It may be surprising that virtual environments generally have the same name no matter the project. This is because it's way easier to use the command source env/bin/activate or source venv/bin/activate both in manual development and tests and programmatically. This also has the benefit of keeping the .gitignore file simple so you're not listing every single virtual environment in it. 
 
@@ -35,7 +37,7 @@ There is a .gitignore in this repo. Observe it to see how virtual environments a
 
 ## The __requirements.txt__ file
 
-It is common to put all the package versions into a requirements.txt file (this SHOULD go in the repo). This file tells developers who are working on your project (or cloning it, whatever) the packages they need to install when they set up a virtual environment. Note that it is a best practice to specify a version of a package when putting it in a __requirements.txt__ file, though this may not always be possible or feasible depending on the project.
+It is common to put all the package versions into a requirements.txt file (this SHOULD go in the repo, and thus it shouldn't be in your virtual environment folder). This file tells developers who are working on your project (or cloning it, whatever) the packages they need to install when they set up a virtual environment. Note that it is a best practice to specify a version of a package when putting it in a __requirements.txt__ file, though this may not always be possible or feasible depending on the project.
 
 You do not have to list the dependencies that may be installed when you installed your packages. Dependencies should be handled by pip install. You can list dependencies, and depending on how you create the requirements.txt file you shouldn't be surprised to see them.
 
@@ -58,3 +60,14 @@ An example of requirements.txt can be seen in the projects/demo-app-2 directory.
 You can also use requirements.txt to __uninstall__ all the packages defined in it. This can be useful if you did something like interrupt a pip install with Ctrl+C and then run into unexpected issues that a subsequent pip install didn't fix. 
 
 `pip uninstall -r requirements.txt`
+
+# Deleting Virtual Environments
+
+You might want to delete a virtual environment for reasons such as: 
+- You no longer work manage or work on a project so you to free up space and clutter, you should locally delete the project files and its associated virtual environment.
+- You botched the name of virtual environment when you made it. You cannot simply rename the virtual environment; you must recreate it with the correct name, so delete the crappy-named one.
+- You are having issues running your application, and you are doing a hail Mary. You can rule out your virtual environment being an issue by deleting it and then rebuilding it.
+
+You can use rm to delete the virtual environment like you would any other directory
+
+You can delete a virtual environment while you're in it/ while it's activated. This should be avoided, because you'll still see the virtual environment name prefixed in your shell. If you deactivate after deletion, you should see that it was indeed deleted. 
