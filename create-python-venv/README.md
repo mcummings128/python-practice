@@ -22,6 +22,8 @@ Each project you work on in Python should run on a virtual environment because d
 
 # Naming
 
+The standard name of virtual environments is env or venv. It's also common to prefix the name with a `.` (i.e. .env or .venv) as this keeps your virtual enviroment hidden and out of the way
+
 It may be surprising that virtual environments generally have the same name no matter the project. This is because it's way easier to use the command source env/bin/activate or source venv/bin/activate both in manual development and tests and programmatically. This also has the benefit of keeping the .gitignore file simple so you're not listing every single virtual environment in it. 
 
 You also don't want to name the virtual environment the same as your project, as this is confusing especially when it comes to directories.
@@ -65,5 +67,7 @@ You might want to delete a virtual environment for reasons such as:
 - You no longer work manage or work on a project so you to free up space and clutter, you should locally delete the project files and its associated virtual environment.
 - You botched the name of virtual environment when you made it. You cannot simply rename the virtual environment; you must recreate it with the correct name, so delete the crappy-named one.
 - You are having issues running your application, and you are doing a hail Mary. You can rule out your virtual environment being an issue by deleting it and then rebuilding it.
+
+You can use rm to delete the virtual environment like you would any other directory
 
 You can delete a virtual environment while you're in it/ while it's activated. This should be avoided, because you'll still see the virtual environment name prefixed in your shell. If you deactivate after deletion, you should see that it was indeed deleted. 
