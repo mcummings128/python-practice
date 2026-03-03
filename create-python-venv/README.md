@@ -12,6 +12,7 @@ demo-app-2: Used to show how virtual environments come with no/few packages inst
 sales-target-distances: TBD
 p2c3s2: Has two separate projects within it. Each has its own virtual environment (venv1, venv2). 
 p2c5s3: Has two separate projects within it. Each has its own virtual environment. The task_1 and task_2 folders have been downloaded externally. task_1 came with a requirements.txt, while task_2 didn't. task_2 posits you create the requirements.txt for others, but this actually ends up not being the case since I ran into issues that are detailed in task_2/script.py. 
+
 # About Virtual Environments
 
 Use virtual environments to make sure that you have the correct packages (including specific versions of packages) available to you as part of your local development environment when you switch between projects we use virtual environments.
