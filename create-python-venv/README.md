@@ -45,7 +45,7 @@ You can take the output of pip freeze to get the packages used for your virtual 
 
 `pip freeze > requirements.txt`
 
-That will take the output of pip freeze and throw it into the requirements.txt file. (Remember > will overwrite the contents). Note that this will explicitly write the dependencies as well. 
+That will take the output of `pip freeze` and throw it into the `requirements.txt` file. (Remember `>` will overwrite the contents). Note that this will explicitly write the dependencies as well. 
 
 __Fun fact__: Installing certain Python packages begets new shell scripts. Usually pip is installed when you install a Python version, and some magic happens with things like setup.py to let the user do shell commands like the above seamlessly
 
